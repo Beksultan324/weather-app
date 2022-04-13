@@ -29,5 +29,6 @@ export class WeatherComponent implements OnInit {
         this.weatherData = data;
         console.log(this.weatherData);
       });
+      this.weatherSearchForm.reset();
   }
 }
