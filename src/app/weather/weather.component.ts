@@ -10,6 +10,8 @@ import { ApixuService } from '../apixu.service';
 export class WeatherComponent implements OnInit {
   weatherSearchForm: FormGroup;
   weatherData: any;
+  date = new Date();
+  dateAfterTwelweHorse = new Date();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -20,6 +22,8 @@ export class WeatherComponent implements OnInit {
     this.weatherSearchForm = this.formBuilder.group({
       location: [''],
     });
+    this.dateAfterTwelweHorse.setHours(this.date.getHours() + 11);
+    console.log(this.dateAfterTwelweHorse.getHours());
   }
 
   sendToAPIXU(formValues: string) {

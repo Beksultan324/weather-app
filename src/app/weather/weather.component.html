@@ -45,8 +45,21 @@
         {{ this.weatherData?.location.country }}
       </p>
       <p class="text-center">
-        Local time: {{ this.weatherData?.location.localtime }}
+        Local time: {{ this.weatherData?.location.localtime}}
       </p>
     </div>
+  </div>
+  <div class="row">
+    <!-- <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ weatherData?.location.name }}</h5>
+        <p class="card-text">{{ weatherData?.location.country }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div> -->
+    <div>{{date | dateToEmoji}}</div>
+    <div>{{dateAfterTwelweHorse | dateToEmoji}}</div>
+    <div>{{'707989796' | phoneNumber}}</div>
+    <input type="text" value="null">
   </div>
 </div>
