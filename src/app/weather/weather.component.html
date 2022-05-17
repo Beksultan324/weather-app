@@ -59,7 +59,13 @@
     </div> -->
     <div>{{date | dateToEmoji}}</div>
     <div>{{dateAfterTwelweHorse | dateToEmoji}}</div>
-    <div>{{'707989796' | phoneNumber}}</div>
-    <input type="text" value="null">
+    <div>{{'707989796' | phoneNumber: 'kg'}} 'kg'</div>
+    <div>{{'707989796' | phoneNumber: 'kz'}} 'kz'</div>
+    <div>{{'707989796' | phoneNumber: 'uz'}} 'uz'</div>
+    <div>{{'707989796' | phoneNumber: 'ru'}} 'ru'</div>
+    <div>{{'707989796' | phoneNumber}} ' '</div>
+    <label for="phoneNumber">
+    </label>
+    <input type="text" id="phoneNumber" value="{{'707989796' | phoneNumber}}">
   </div>
 </div>

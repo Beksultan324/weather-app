@@ -22,7 +22,7 @@ export class WeatherComponent implements OnInit {
     this.weatherSearchForm = this.formBuilder.group({
       location: [''],
     });
-    this.dateAfterTwelweHorse.setHours(this.date.getHours() + 11);
+    this.dateAfterTwelweHorse.setHours(this.date.getHours() + 12);
     console.log(this.dateAfterTwelweHorse.getHours());
   }
 
