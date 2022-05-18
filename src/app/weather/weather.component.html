@@ -44,7 +44,7 @@
         Location Searched: {{ this.weatherData?.location.name }},
         {{ this.weatherData?.location.country }}
       </p>
-      <p class="text-center">
+      <p appMark class="text-center">
         Local time: {{ this.weatherData?.location.localtime}}
       </p>
     </div>
@@ -58,10 +58,10 @@
       </div>
     </div> -->
     <div>{{date | dateToEmoji}} {{date.getHours()}}</div>
-    <div>{{dateAfterTwelweHorse | dateToEmoji}} {{dateAfterTwelweHorse.getHours()}} </div>
+    <div appMark>{{dateAfterTwelweHorse | dateToEmoji}} {{dateAfterTwelweHorse.getHours()}} </div>
     
     <div>{{707123456 | phoneNumber: 'kg'}} 'kg'</div>
-    <div>{{707123456 | phoneNumber: 'ua'}} 'ua'</div>
+    <div appMark>{{707123456 | phoneNumber: 'ua'}} 'ua'</div>
     <div>{{707123456 | phoneNumber: 'kz'}} 'kz'</div>
     <div>{{707123456 | phoneNumber: 'uz'}} 'uz'</div>
     <div>{{4951234567 | phoneNumber: 'ru'}} 'ru'</div>
@@ -76,3 +76,5 @@
     <!-- <input type="text" id="phoneNumber" value="{{'707989796' | phoneNumber}}"> -->
   </div>
 </div>
+
+<app-switch></app-switch>

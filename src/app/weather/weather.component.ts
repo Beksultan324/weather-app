@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApixuService } from '../apixu.service';
 
@@ -41,4 +41,7 @@ export class WeatherComponent implements OnInit {
       });
       this.weatherSearchForm.reset();
   }
+
+  // @HostBinding('style') styles = {'color': 'red'};
+  @HostBinding('id') id = 12;
 }

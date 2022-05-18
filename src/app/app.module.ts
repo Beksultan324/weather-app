@@ -12,9 +12,11 @@ import { DateToEmojiPipe } from './shared/pipes/date-to-emoji/date-to-emoji.pipe
 import { PhoneNumberPipe } from './shared/pipes/phone-number/phone-number.pipe';
 import { MarkDirective } from './shared/directives/mark.directive';
 import { GetNAPipe } from './shared/pipes/get-N_A/get-n-a.pipe';
+import { SwitchComponent } from './directives/switch/switch.component';
+import { ContainerComponent } from './directives/switch/container/container.component';
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe, MarkDirective, GetNAPipe],
+  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe, MarkDirective, GetNAPipe, SwitchComponent, ContainerComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(allAppRoutes),
