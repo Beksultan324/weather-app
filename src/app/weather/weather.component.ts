@@ -13,6 +13,12 @@ export class WeatherComponent implements OnInit {
   date = new Date();
   dateAfterTwelweHorse = new Date();
 
+  str1 = 'String';
+  str2: string;
+
+  num1 = 12;
+  num2 = null;
+
   constructor(
     private formBuilder: FormBuilder,
     private apixuService: ApixuService

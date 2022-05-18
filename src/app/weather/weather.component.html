@@ -57,15 +57,22 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div> -->
-    <div>{{date | dateToEmoji}}</div>
-    <div>{{dateAfterTwelweHorse | dateToEmoji}}</div>
-    <div>{{'707989796' | phoneNumber: 'kg'}} 'kg'</div>
-    <div>{{'707989796' | phoneNumber: 'kz'}} 'kz'</div>
-    <div>{{'707989796' | phoneNumber: 'uz'}} 'uz'</div>
-    <div>{{'707989796' | phoneNumber: 'ru'}} 'ru'</div>
-    <div>{{'707989796' | phoneNumber}} ' '</div>
-    <label for="phoneNumber">
-    </label>
-    <input type="text" id="phoneNumber" value="{{'707989796' | phoneNumber}}">
+    <div>{{date | dateToEmoji}} {{date.getHours()}}</div>
+    <div>{{dateAfterTwelweHorse | dateToEmoji}} {{dateAfterTwelweHorse.getHours()}} </div>
+    
+    <div>{{707123456 | phoneNumber: 'kg'}} 'kg'</div>
+    <div>{{707123456 | phoneNumber: 'ua'}} 'ua'</div>
+    <div>{{707123456 | phoneNumber: 'kz'}} 'kz'</div>
+    <div>{{707123456 | phoneNumber: 'uz'}} 'uz'</div>
+    <div>{{4951234567 | phoneNumber: 'ru'}} 'ru'</div>
+    <div>{{49512345 | phoneNumber: 'ru'}} 'ru'</div>
+    <div>{{707989796 | phoneNumber}} ' '</div>
+
+    <div>{{str1 | getNA}}</div> 
+    <div>{{str2 | getNA}}</div> 
+    <div>{{num1 | getNA}}</div> 
+    <div>{{num2 | getNA}}</div> 
+    
+    <!-- <input type="text" id="phoneNumber" value="{{'707989796' | phoneNumber}}"> -->
   </div>
 </div>

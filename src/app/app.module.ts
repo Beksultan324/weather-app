@@ -10,9 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApixuService } from './apixu.service';
 import { DateToEmojiPipe } from './shared/pipes/date-to-emoji/date-to-emoji.pipe';
 import { PhoneNumberPipe } from './shared/pipes/phone-number/phone-number.pipe';
+import { MarkDirective } from './shared/directives/mark.directive';
+import { GetNAPipe } from './shared/pipes/get-N_A/get-n-a.pipe';
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe],
+  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe, MarkDirective, GetNAPipe],
   imports: [
     BrowserModule,
     RouterModule.forRoot(allAppRoutes),
