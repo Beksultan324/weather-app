@@ -59,7 +59,7 @@
     </div> -->
     <div>{{date | dateToEmoji}} {{date.getHours()}}</div>
     <div appMark>{{dateAfterTwelweHorse | dateToEmoji}} {{dateAfterTwelweHorse.getHours()}} </div>
-    
+
     <div>{{707123456 | phoneNumber: 'kg'}} 'kg'</div>
     <div appMark>{{707123456 | phoneNumber: 'ua'}} 'ua'</div>
     <div>{{707123456 | phoneNumber: 'kz'}} 'kz'</div>
@@ -68,13 +68,15 @@
     <div>{{49512345 | phoneNumber: 'ru'}} 'ru'</div>
     <div>{{707989796 | phoneNumber}} ' '</div>
 
-    <div>{{str1 | getNA}}</div> 
-    <div>{{str2 | getNA}}</div> 
-    <div>{{num1 | getNA}}</div> 
-    <div>{{num2 | getNA}}</div> 
-    
+    <div>{{str1 | getNA}}</div>
+    <div>{{str2 | getNA}}</div>
+    <div>{{num1 | getNA}}</div>
+    <div>{{num2 | getNA}}</div>
+
     <!-- <input type="text" id="phoneNumber" value="{{'707989796' | phoneNumber}}"> -->
   </div>
 </div>
 
 <app-switch></app-switch>
+
+<app-parent></app-parent>

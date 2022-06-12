@@ -1,0 +1,7 @@
+.child {
+  display: block;
+  border: 1px solid #faa;
+  box-sizing: border-box;
+  margin: 20px;
+  padding: 20px;
+}

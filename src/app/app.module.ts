@@ -14,9 +14,11 @@ import { MarkDirective } from './shared/directives/mark.directive';
 import { GetNAPipe } from './shared/pipes/get-N_A/get-n-a.pipe';
 import { SwitchComponent } from './directives/switch/switch.component';
 import { ContainerComponent } from './directives/switch/container/container.component';
+import { ParentComponent } from './directives/workingWithTemplates/parent/parent.component';
+import { ChildComponent } from './directives/workingWithTemplates/parent/child/child.component';
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe, MarkDirective, GetNAPipe, SwitchComponent, ContainerComponent],
+  declarations: [AppComponent, WeatherComponent, DateToEmojiPipe, PhoneNumberPipe, MarkDirective, GetNAPipe, SwitchComponent, ContainerComponent, ParentComponent, ChildComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(allAppRoutes),

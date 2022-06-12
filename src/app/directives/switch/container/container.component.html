@@ -1,36 +1,42 @@
 <ng-container *ngFor="let fruit of fruits">
   <ng-container  *ngTemplateOutlet="isFruit; context: {fruit: fruit}"></ng-container>
 </ng-container>
-<!-- <ng-container *ngIf="isPrimary; else notPrimary">
+
+<!-- <ng-container *ngIf="true; else notPrimary">
   <div>true</div>
 </ng-container> -->
+
 <ng-template #isFruit let-iNameAsFruit="fruit">
   <div>Fruit Template</div>
   <div>{{ iNameAsFruit }}</div>
 </ng-template>
 
-<ng-template #notPrimary let-myName="name" let-myAge="age">
+<!-- <ng-template #notPrimary let-myName="name" let-myAge="age">
   <div>Not Primary Template</div>
-  <div>{{ myName }}</div>
-  <div>{{ myAge }}</div>
-</ng-template>
+  <div>myName: {{ myName }}</div>
+  <div>myAge: {{ myAge }}</div>
+</ng-template> -->
 
-<ng-template #firstPrimary let-myName="name" let-myAge="age">
+<!-- <ng-template #firstPrimary let-myName="name" let-myAge="age">
   <div>First Primary Template</div>
   <div>{{ myName }}</div>
-</ng-template>
+</ng-template> -->
 
-<ng-container
+<!-- <ng-container
   *ngTemplateOutlet="
     true ? firstPrimary : notPrimary;
     context: true
       ? { name: true ? 'Kate1' : 'Kate2', age: 2 }
       : { name: 'Allison', age: 32 }
   "
-></ng-container>
+></ng-container> -->
 
-<ng-container [ngSwitch]="count">
+<!-- <ng-container
+  *ngTemplateOutlet="notPrimary; context: true ? { name: 'Kate2', age: 2 } : { name: 'Allison', age: 32 }">
+</ng-container> -->
+
+<!-- <ng-container [ngSwitch]="count">
   <ng-template ngSwitchCase="1">1</ng-template>
   <ng-template ngSwitchCase="2">2</ng-template>
   <ng-template ngSwitchCase="3">3</ng-template>
-</ng-container>
+</ng-container> -->

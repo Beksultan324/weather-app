@@ -1,0 +1,24 @@
+<ng-content select=".header"></ng-content>
+<ng-content></ng-content>
+
+<p>child works!</p>
+<hr>
+<ng-content select=".footer"></ng-content>
+<hr>
+
+<ng-template #ref let-number="foo" let-prefix>
+  <p>{{ prefix }} I am template {{number}}</p>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="ref; context: {foo: 123, $implicit: 'Hello'}"></ng-container>
+
+
+
+<ng-template #default let-number="foo">
+  <p>{{ number }} I am template</p>
+</ng-template>
+
+<ng-container *ngFor="let item of [1, 2, 3]">
+  <ng-container *ngTemplateOutlet="default; context: {}"></ng-container>
+</ng-container>
+
