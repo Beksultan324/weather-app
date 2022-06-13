@@ -1,5 +1,13 @@
-<app-child class="child">
+<app-child class="child" [template]="ref">
   <p class="header">Header</p>
   <p class="body">Body</p>
   <p class="footer">Footer</p>
 </app-child>
+
+<ng-template #ref let-element>
+  <p>{{ element }}. I am parent template</p>
+</ng-template>
+
+<ng-container *ngFor="let item of [4, 2, 3, 1]">
+  <ng-container *ngTemplateOutlet="ref; context: {$implicit: item}"></ng-container>
+</ng-container>

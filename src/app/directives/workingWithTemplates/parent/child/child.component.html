@@ -10,15 +10,22 @@
   <p>{{ prefix }} I am template {{number}}</p>
 </ng-template>
 
+
 <ng-container *ngTemplateOutlet="ref; context: {foo: 123, $implicit: 'Hello'}"></ng-container>
 
-
-
-<ng-template #default let-number="foo">
-  <p>{{ number }} I am template</p>
+<ng-template #default let-numb>
+  <p>{{ numb }}. I am default template</p>
 </ng-template>
 
 <ng-container *ngFor="let item of [1, 2, 3]">
-  <ng-container *ngTemplateOutlet="default; context: {}"></ng-container>
+  <ng-container *ngTemplateOutlet="template || default; context: {$implicit: item}"></ng-container>
 </ng-container>
+
+<ng-container *ngIf="false; else elseblock">
+  <p>true block</p>
+</ng-container>
+
+<ng-template #elseblock>
+  <p>false block</p>
+</ng-template>
 
